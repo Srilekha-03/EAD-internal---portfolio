@@ -1,0 +1,120 @@
+.education-container {
+    padding: 2rem 0;
+  }
+  
+  .education-section,
+  .certifications-section {
+    margin-bottom: 3rem;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto 0;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: var(--accent);
+    top: 0;
+    bottom: 0;
+    left: 20px;
+    margin-left: -2px;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-left: 40px;
+    margin-bottom: 2rem;
+  }
+  
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: -40px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .timeline-content {
+    padding: 1.5rem;
+  }
+  
+  .education-level {
+    font-size: 1.4rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+  
+  .institution {
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .location,
+  .degree,
+  .grade {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .duration {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background-color: var(--bg-secondary);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  
+  .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .certification-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .certification-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .certification-name {
+    font-size: 1.3rem;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+  }
+  
+  .certification-issuer,
+  .certification-date {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .timeline::before {
+      left: 8px;
+    }
+    
+    .timeline-item {
+      margin-left: 20px;
+    }
+    
+    .timeline-item::before {
+      left: -20px;
+      width: 15px;
+      height: 15px;
+    }
+    
+    .certifications-grid {
+      grid-template-columns: 1fr;
+    }
+  }
